@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+	<style>
+	span {
+	    background-color:light-grey;
+	    border-radius:40px;
+	    color:green;
+	}
+	span:last-of-type{
+	    color:red;
+	}
+
+	button {
+	    background-color: #4CAF50;
+	    color: white;
+	    padding: 20px;
+	    font-size: 50px;
+	    border: none;
+	    cursor:pointer;
+	}
+
+	#a {
+	    background-color: red;
+	}
+
+	button:hover {
+	    background-color:#3e8e41;
+	}
+	
+	</style>  
+	<script>
+	var i = 0
+
+	function Count() {
+	    document.getElementById("output").innerHTML = i++ + 1;
+	}
+
+	function Count_1() {
+	    document.getElementById("output_1").innerHTML = i++ + 1;
+	}
+	</script>  
+	</head>
+    <body>
+        <li><a href="../index.html">Accueil</a></li>
+    <div align="center">
+    <h1>Cliqueur</h1>
+        <button onclick="Count()">entree</button>
+        </div>
+       <hr>
+       <div align="center">
+       <label>Nombres de personnes entrees</label>
+        <span id="output">0</span>
+        <hr>
+            <div align="center">
+
+        <button onclick="Count_1()" id ="a">sortie</button>
+        </div>
+       <hr>
+       <label>Nombres de personnes entrees</label>
+        <span id="output_1">0</span>
+        <hr>
+    </body>
+</html>

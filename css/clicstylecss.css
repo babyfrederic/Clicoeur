@@ -1,0 +1,62 @@
+span {
+    background-color:light-grey;
+    border-radius:15px;
+    color:green;
+}
+span:last-of-type{
+    color:red;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
+    padding:20px;
+}
+#a {
+    background-color: red;
+}
+
+button:hover {
+    background-color:#172bdd;
+}
+#resultat{
+    background-color:#1411c4;
+    color:white;
+    font-size:50px;
+    padding:4px;	
+}
+#v {
+    background-color:#8115c9;
+}
+#o {
+    background-color:#4dd2ff;	
+}
+#u {
+    background-color:hsl(234, 84%, 44%);	
+}
+#s  {
+    background-color:#ee16dc;
+}
+.mi {
+    width: 47%;
+    height:200px;
+    float:left;
+    margin:20px;
+    margin-top: 40px;
+}
+@media screen and (max-width: 600px) {
+.mi {
+width: 100%;
+margin: 0;
+}
+.bouton {   
+    background-color: #021802;
+    color: white;
+    padding: 30px;
+    font-size: 20px;
+    border: none;
+    cursor:pointer;
+}
