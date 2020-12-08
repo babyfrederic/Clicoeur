@@ -22,17 +22,20 @@ window.addEventListener('load',horloge);
 
 
 /*** valeurs pour les entrees et sorties ***/
-    var i = 0;
-    var o = 0;
-    var ii= 0;
-    var ou= 0;
-    var coi = 0 ;
-    var coo =0 ;
-    var tour = 1;
-    var statresult = 1 ;
+    var i = 0;      /*** variable compteur entrees***/
+    var o = 0;      /*** variable compteur sorties***/
+    var ii= 0;      /*** variable compteur ecart entrées stat***/
+    var ou= 0;      /*** variable compteur ecart sorties stat***/
+    var coi = 0 ;   /*** variable compteur entrées stat***/
+    var coo =0 ;    /*** variable compteur sorties stat***/
+    var tour = 1;   /*** compteur de tours ***/ 
+    var sta =0;
+    var stb=0;
+    var tot =0;
+    var statresult = 1 ; 
     var total = 0 ;
 	function Count() {
-        document.getElementById("inputa").innerHTML = i++ + 1;
+        document.getElementById("inputa").innerHTML = i++ + 1;  
     }
     function Countis() {
         document.getElementById("inputas").innerHTML = coi++ + 1;
