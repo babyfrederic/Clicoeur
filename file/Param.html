@@ -6,66 +6,71 @@
         <link rel="stylesheet" href="../css/clicstylecss.css">
        <!-- <link rel="stylesheet" href="../css/CssParam.css">-->
         <script src="../js/clicjs.js"></script>
-
+        
        
     </head>
-    <body onload="checkCookie()"></body>
-
-    <!-- /**** compte entrée ****/
-    SEUIL D'ALERTE Fixé
-    #CALCULER LE SEUIL D'ALERTE
-    surfaces = int(input("Surface de l'espace m2 : "))
-    secur = float(input("Périmètre de sécurité (8 suggeré) : "))
-    -->
-    
-    <body>
+    <body onload="checkCookie()">
+        <div id=back>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
         <h5 style="text-align: center;">Détermination du Seuil d'alerte</h5> 
-     
 <!-- /**** affichage de la date ****/      -->
-
-        <h5 style="text-align: center;" id="heur"></h5>
+       
+<p id="heur">heure</p>
 
 <!-- /**** affichage de la Surface  ****/      -->
 
         <div style="text-align: center">
-          <label>Surface du lieu </label> 
+          <label>Surface du lieu (m2)</label> 
             <div class="floating">
                 <label >Surface </label>
                 <input placeholder="Surface" type="number" name="surfacein" id="surfacein" autocomplete="off">
-
 <!-- /**** affichage de perimetre ****/      -->
-
-               </br>
+                </br>
+                </br>
+               <label>Distance de Sécurité (m2)</label>
                 <div class="floating">
-                    </br>
-                    <label >Distance de Sécurité</label>
+                    <label >Sécurité</label>
                     <input placeholder="8" type="number" name="distsecuin" id="distsecuin" autocomplete="off">
                 </div>
                     </br>
                 </div>
             </div>
+
+
 <!-- /**** affichage du seuil  ****/      -->        
             <div style="text-align: center">
                 </br>
                 <input type="number" placeholder="surface / distance" id="leseuil" >
                 </br>
-                <span style="color:rgb(25, 154, 240)"  leseuil ></span>
+                <label>Seuil de Tolérance (nb. max de personnes)</label>
+                <span id="distsecuin" style="color:rgb(25, 184, 233);">0 "dist. secu."</span>
+                <span id="surfacein" style="color:rgb(25, 184, 233);">0 "Surface"</span>
+                <span id="leseuilcalcul" style="color:rgb(25, 184, 233);">0 "Seuilcal"</span>
+                <span id="leseuil" style="color:rgb(25, 184, 233);">0 "Seuil"</span>
+                <span style="color:rgb(25, 154, 240);"  leseuil ></span>
+
                 <span style="color:rgb(25, 154, 240)"; seuil >  Personnes : Seuil de tolerance </span>
             </div>
             </br>   
             </br>
-            <div class="floating">
+            <div style="text-align: center">
                 <label for="email">Email:</label>
                 <input placeholder="Email" type="email" name="email" id="email" autocomplete="off">
             </div>
-            <h4>Valeur surface / distance de Sécurité </h4>
-            <form>
-                <input type="text" id="input" name="input" value=""><br>
-                <input type="button" id="bouton" value="Contrôler" onclick="controle()">
-            </form>
+            <div style="text-align: center"></div>
+                <h4>Valeur surface / distance de Sécurité </h4>
+                <form>
+                    <input type="text" id="input" name="input" value=""><br>
+                    <input type="button" id="bouton" value="Contrôler" onclick="controle()">
+                </form>
+            </div>
+        </div>
+        
+        <p id="leseuilcalcul">calcul du seuil</p>
+    
+        </div>
         </div>
     </body>
 </html>

@@ -1,13 +1,4 @@
-/*** Horloge de param ***/
-function datehor () 
-  {  
-  var d = new Date();
-  d.setFullYear(2020);
-  document.getElementById("heur").innerHTML = d;
-  }
-
   
-
 /*** valeurs pour les entrees et sorties ***/
 var i = 0;      /*** variable compteur entrees***/
 var o = 0;      /*** variable compteur sorties***/
@@ -21,9 +12,9 @@ var stb=0;
 var tot =0;
 var statresult = 1 ; 
 var total = 0 ;
-let surface = 0;
-let perisecu =0 ;
-let seuil = 0 ;
+var surface = 0;
+var perisecu =1 ;
+var seuil = 0 ;
 function Count() 
   {
     document.getElementById("inputa").innerHTML = i++ + 1;  
@@ -95,8 +86,8 @@ var perisecu = 1;
 */
 function monseuil()
   {
-    let surface = document.getElementById("surfacein").value ;
-    let perisecu = document.getElementById("distsecuin").value;
+    var surface = document.getElementById("surfacein").innerText;
+    var perisecu = document.getElementById("distsecuin").innerText;
     seuil = surface / perisecu ;
     document.getElementById("leseuil").innerHTML = surface / perisecu;
   }
@@ -108,14 +99,35 @@ function getValue()
     alert("Vous avez choisi : "+ input);
   }
 
-function newdate()
+/**function newdate()
   {
     var d = new Date();
     d.setFullYear(2020, 11, 3);
     document.getElementById("demo").innerHTML = d;
-  }
+  }*/
+  /*** Horloge de param ***/
+function datehor () 
+{  
+var d = new Date();
+d.setFullYear(2020);
+document.getElementById("heur").innerHTML = d;
+}
 
-/*
+function calcul()
+{
+  /*
+  var surf = document.getElementById("surfacein").innerText;
+  var peri = document.getElementById("distsecuin").innerText;
+  var x = surf/peri;
+  */
+  x.toString();            // returns ___ from variable x
+  (surf).toString(); 
+  (peri).toString();        
+  (surf / peri).toString();
+  document.getElementById("leseuilcalcul").innerHTML= (surf/peri).toString();
+}
+
+
 function setCookie(cname,cvalue,exdays) {
 var d = new Date();
 d.setTime(d.getTime() + (exdays*24*60*60*1000));
@@ -151,7 +163,7 @@ function checkCookie()
     }
   }
 
-*/
+
 function controle()
 {
 var saisie =document.getElementById("input").value;
