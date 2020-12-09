@@ -7,98 +7,65 @@
        <!-- <link rel="stylesheet" href="../css/CssParam.css">-->
         <script src="../js/clicjs.js"></script>
 
-       <script>
-        function setCookie(cname,cvalue,exdays) {
-        var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        var expires = "expires=" + d.toGMTString();
-        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../";
-        }
-
-        function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-        }
-       function checkCookie() {
-            var user=getCookie("username");
-            if (user != "") {
-              alert("Bonjour " + user);
-            } else {
-               user = prompt("Nous allons Déterminer le seuil de tolerance. Merci d'entrer votre Nom : ","");
-               if (user != "" && user != null) {
-                 setCookie("username", user, 10);
-               }
-            }
-          }
-        </script>
        
     </head>
     <body onload="checkCookie()"></body>
+
     <!-- /**** compte entrée ****/
     SEUIL D'ALERTE Fixé
     #CALCULER LE SEUIL D'ALERTE
     surfaces = int(input("Surface de l'espace m2 : "))
     secur = float(input("Périmètre de sécurité (8 suggeré) : "))
-    # seuilcalcule=surfaces // secur
-    print("le seuil devrait se situer vers : ", surfaces // secur)
-    print("Fixer les parametres de base  ")
-    seuil_alerte = int(input("donner le Seuil d'alerte CHOISI: ")) -->
+    -->
     
     <body>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
         <h5 style="text-align: center;">Détermination du Seuil d'alerte</h5> 
-        <div align="center">
-            <label>Surface Du lieu </label> 
-            <div class="floating-label">
-                <label for="Surface">Surface </label>
-                <input placeholder="Surface" type="number" name="Surface" id="surface" autocomplete="off">
-                    <div class="icon">
-                    </div>
-            </div>
-            <span id="inputspace" style="color:green;"> exemple : 120 : Surface de l'espace en m2  </span>
-        </br>
-        <div class="floating-label">
-            <label for="inputsecur">Distance de Sécurité</label>
-            <input placeholder="Distance de Sécurité" type="number" name="Distance de Sécurité" id="Distance de Sécurité" autocomplete="off">
-                <div class="icon">
-                </div>
-        </div>
-            <span id="inputsecur" style="color:rgb(231, 83, 14);">exemple : 8 : Périmètre de sécurité (8 suggeré ) </span>
-        </br>
-        </br>
-        <button onclick="myseuil()">Calculer</button>
-        <p id="seuil" style="color:rgb(25, 154, 240)"></p>
-        <span style="color:rgb(25, 154, 240)">  Personnes : Seuil de tolerance </span>
-        </div>
-        <h4>Horloge </h4>
-        <p id='tog'>Il est actuellement <span id='heure'></span></p>
-        <button id='bouton'>Cacher / Afficher l'heure</button>
-        
-    
-        <button onclick="myFunction()">Ajout</button>   
-        <p id="demo"></p>
-  
-    <div class="floating-label">
-        <input placeholder="Email" type="email" name="email" id="email" autocomplete="off">
-        <label for="email">Email:</label>
-            <div class="icon">
-            </div>
-    </div>
-    
-    </body>
+     
+<!-- /**** affichage de la date ****/      -->
 
+        <h5 style="text-align: center;" id="heur"></h5>
+
+<!-- /**** affichage de la Surface  ****/      -->
+
+        <div style="text-align: center">
+          <label>Surface du lieu </label> 
+            <div class="floating">
+                <label >Surface </label>
+                <input placeholder="Surface" type="number" name="surfacein" id="surfacein" autocomplete="off">
+
+<!-- /**** affichage de perimetre ****/      -->
+
+               </br>
+                <div class="floating">
+                    <label >Distance de Sécurité</label>
+                    <input placeholder="Distance de Sécurité" type="number" name="distsecuin" id="distsecuin" autocomplete="off">
+                </div>
+                    </br>
+                </div>
+            </div>
+        
+            <div style="text-align: center">
+                </br>
+                <input type="number" placeholder="8" id="leseuil" >
+                </br>
+                <span style="color:rgb(25, 154, 240)"  leseuil ></span>
+                <span style="color:rgb(25, 154, 240)"; seuil >  Personnes : Seuil de tolerance </span>
+            </div>
+        </div>
+        </br>   
+        </br>
+        <div class="floating">
+            <label for="email">Email:</label>
+            <input placeholder="Email" type="email" name="email" id="email" autocomplete="off">
+        </div>
+        <h4>Valeur surface / distance de Sécurité </h4>
+        <form>
+            <input type="text" id="input" name="input" value=""><br>
+            <input type="button" id="bouton" value="Contrôler" onclick="controle()">
+        </form>
+    </body>
 </html>
 
