@@ -36,6 +36,11 @@
                 font-size:30px;
                 padding:2px;	
             }
+        #back 
+            {
+            background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            }
         #v {
                 background-color:#8115c9;
             }
@@ -137,58 +142,63 @@
      <!-- /**** fin de partie javascript ****/ --> 
 </head>
 	<body>
+        <div id=back>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="../file/Param.html">Parametres</a></li>
         <li><a href="../file/statclicoeur.html">Stats Clicoeur</a></li>
-        <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
-            <div class="mi">
-                <!-- /**** compte entrée ****/ -->
-                <button onclick="Count(); ecart();Countis() ; garde()">entree</button>
-                <hr>
-                <div align="center">
-                    <label>Nombres de personnes entrees</label>
-                    <span id="inputa" style="color:green;">0</span>
+            <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
+           
+                <div class="mi">
+                </br>
+                    <!-- /**** compte entrée ****/ -->
+                    <button onclick="Count(); ecart();Countis() ; garde()">entree</button>
+                    <hr>
+                    <div align="center">
+                        <label>Nombres de personnes entrees</label>
+                        <span id="inputa" style="color:green;">0</span>
+                    </div>
+                    <hr>
                 </div>
-                <hr>
-            </div>
-            <div class="mi">
-                <div align="center">
-                    <!-- /**** compte sortie ****/ -->
-                    <button onclick="Count_1(); ecart(); Countos_1() ;garde()" id ="a">sortie</button>
-                </div>
-                <hr>
-                <div align="center">
-                    <label >Nombres de personnes sorties</label>
-                    <span id="outputa">0</span>
-                </div>
-                <hr>
+                <div class="mi">
+                    <div align="center">
+                        <!-- /**** compte sortie ****/ -->
+                        <button onclick="Count_1(); ecart(); Countos_1() ;garde()" id ="a">sortie</button>
+                    </div>
+                    <hr>
+                    <div align="center">
+                        <label >Nombres de personnes sorties</label>
+                        <span id="outputa">0</span>
+                    </div>
+                    <hr>
 
-            <br>
-            <div align="center" style="display: block;">
-                <h3>ecart</h3>
-                <span id ="resultat"> 0</span>
-            </div>
-       <br>
-            <div align="center">
-                <button onclick="zero()" id="o">Compteurs a zero</button>
-            </div>
-            <br>
-            <div align="center" style="display: block;">
-                <h3>total cumulé sans RAZ</h3> 
-                <h5> In    Out    Ecart  </h5>
-                <span id="inputas" style="color:green;">0 "Entrées"</span> 
-                <span id="outputas" style="color:rgb(228, 22, 15);">0 "Sorties" </span>
-                <span id ="resultatsab" style="color:rgb(32, 19, 209);"> 0 "Cumul" </span>
-            </div>
-            <div align="center">
-                <button onclick="peri()" id="v">Période Suivante</button>
+                <br>
                 <div align="center" style="display: block;">
-                    <span id ="uptour"> 1</span>
-        
+                    <h3>ecart</h3>
+                    <span id ="resultat"> 0</span>
+                </div>
+                <br>
+                <div align="center">
+                    <button onclick="zero()" id="o">Compteurs a zero</button>
+                </div>
+                <br>
+                <div align="center" style="display: block;">
+                    <h3>total cumulé sans RAZ</h3> 
+                    <h5> In    Out    Ecart  </h5>
+                    <span id="inputas" style="color:green;">0 "Entrées"</span> 
+                    <span id="outputas" style="color:rgb(228, 22, 15);">0 "Sorties" </span>
+                    <span id ="resultatsab" style="color:rgb(32, 19, 209);"> 0 "Cumul" </span>
                 </div>
                 <div align="center">
-                    <button onclick="zerostat()" id="u">Tous Compteurs a zero</button>
+                    <button onclick="peri()" id="v">Période Suivante</button>
+                    <div align="center" style="display: block;">
+                        <span id ="uptour"> 1</span>
+            
+                    </div>
+                    <div align="center">
+                        <button onclick="zerostat()" id="u">Tous Compteurs a zero</button>
+                    </div>
                 </div>
-        <!-- /**** partie affichage stat ****/ -->
+            </div> 
+        </div><!-- /**** partie affichage stat ****/ -->
     </body>
 </html>
