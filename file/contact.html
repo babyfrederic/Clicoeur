@@ -23,6 +23,19 @@
             <li><a href="../file/statclicoeur.html">Stats Clicoeur</a></li>
         </ul>
     </button>
+
+    
+  </br> 
+    <input type="text" id="myInput" oninput="myFunction()">
+  </br>
+  <p id="dem"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput").value;
+  document.getElementById("dem").innerHTML = "Votre demande: " + x;
+}
+</script>
 </body>
 
-  </html>
+</html>
