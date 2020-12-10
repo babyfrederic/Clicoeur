@@ -13,11 +13,13 @@
         <div id=back>
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
+        <li><a href="../file/statclicoeur.html">Stats Clicoeur</a></li>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
         <h5 style="text-align: center;">Détermination du Seuil d'alerte</h5> 
 <!-- /**** affichage de la date ****/      -->
        
 <p id="heur">heure</p>
+
 
 <!-- /**** affichage de la Surface  ****/      -->
 
@@ -44,6 +46,7 @@
                 </br>
                 <input type="number" placeholder="surface / distance" id="leseuil" >
                 </br>
+                <buton id="leseuil"  name="calculer seuil" on click="monseuil()" >
                 <label>Seuil de Tolérance (nb. max de personnes)</label>
                 <span id="distsecuin" style="color:rgb(25, 184, 233);">0 "dist. secu."</span>
                 <span id="surfacein" style="color:rgb(25, 184, 233);">0 "Surface"</span>

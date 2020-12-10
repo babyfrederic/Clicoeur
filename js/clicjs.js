@@ -80,15 +80,15 @@ function peri()
         document.getElementById("uptour").innerHTML =1;
     }
 /*** valeurs pour le seuil d'alerte ***/
-/** calcul du seuil recommandé 
+/** calcul du seuil recommandé */
 var  surface =0;
 var perisecu = 1;
-*/
 function monseuil()
   {
     var surface = document.getElementById("surfacein").innerText;
     var perisecu = document.getElementById("distsecuin").innerText;
     seuil = surface / perisecu ;
+    console.log(seuil);
     document.getElementById("leseuil").innerHTML = surface / perisecu;
   }
 function getValue() 
@@ -99,13 +99,14 @@ function getValue()
     alert("Vous avez choisi : "+ input);
   }
 
-/**function newdate()
+function newdate()
   {
-    var d = new Date();
-    d.setFullYear(2020, 11, 3);
-    document.getElementById("demo").innerHTML = d;
-  }*/
-  /*** Horloge de param ***/
+    var da = new Date();
+    da.setFullYear(2020, 11, 3);
+    document.getElementById('dateur').innerHTML = da;
+  }
+
+  /*** Horloge de param **
 function datehor () 
 {  
 var d = new Date();
@@ -115,18 +116,18 @@ document.getElementById("heur").innerHTML = d;
 
 function calcul()
 {
-  /*
+  
   var surf = document.getElementById("surfacein").innerText;
   var peri = document.getElementById("distsecuin").innerText;
   var x = surf/peri;
-  */
+  
   x.toString();            // returns ___ from variable x
   (surf).toString(); 
   (peri).toString();        
   (surf / peri).toString();
   document.getElementById("leseuilcalcul").innerHTML= (surf/peri).toString();
 }
-
+*/
 
 function setCookie(cname,cvalue,exdays) {
 var d = new Date();

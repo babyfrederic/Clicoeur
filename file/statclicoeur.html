@@ -1,157 +1,23 @@
 <!-- /**** Navigateur ****/ -->
-
-<!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-		<title>clicoeur </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <!-- /**** partie css ****/ -->
-	<style>
-        body {
-            
-            }
-        span {
-                background-color:light-grey;
-                border-radius:15px;
-                color:green;
-            }
-        span:last-of-type{
-                color:red;
-            }
-        button {
-                background-color: #4CAF50;
-                color: white;
-                padding: 30px;
-                font-size: 20px;
-                border: none;
-                cursor:pointer;
-            }
-        #a {
-                background-color: red;
-            }
-
-        button:hover {
-                background-color:#3e8e41;
-            }
-        #resultat{
-                background-color:#FF4500;
-                color:white;
-                font-size:30px;
-                padding:2px;	
-            }
-        #o {
-                background-color:#4dd2ff;	
-            }
-        #s  {
-            background-color:#ee16dc;
-        }
-        .mi {
-                width: 47%;
-                height:200px;
-                float:left;
-                margin:20px;
-                margin-top: 40px;
-            }
-        @media screen and (max-width: 600px) {
-        .mi {
-            width: 100%;
-            margin: 0;
-        }
-        button {
-            padding:20px;
-        }
-    }
-    </style>  
-
-    <!-- /**** partie javascript ****/ -->
-	<script>
-	var i = 0;
-    var j = 0;
-    var statresult = 0 ;
-    var total = 0 ;
-	function Count() {
-	    document.getElementById("output").innerHTML = i++ + 1;
-	}
-
-	function Count_1() {
-	    document.getElementById("output_1").innerHTML = j++ + 1;
-	}
-	function ecart(){
-	   var t = document.getElementById("output").innerText;
-	   var i = document.getElementById("output_1").innerText;
-	   document.getElementById("resultat").innerHTML = t - i;
-	}
-	function zero(){
-	    document.getElementById("output").innerHTML = 0;
-	    document.getElementById("output_1").innerHTML =0;
-	    document.getElementById("resultat").innerHTML =0;
-	    i = 0;
-	    j = 0;
-    }
-    <!-- /**** partie stat ****/ -->
-    function stat() {
-        document.getElementById("stat").innerHTML = t - i; 
-        document.getElementById("periode").innerHTML = statresult++ + 1;
-        document.getElementById("statotal").innerHTML = total++ + statresult; 
-    }
-    fonction zerostat(){
-        document.getElementById("stat").innerHTML =0;
-        document.getElementById("periode").innerHTML =0;
-        statresult = 0 ;
-    }
-    </script> 
-     <!-- /**** fin de partie javascript ****/ --> 
-</head>
-	<body>
-        <h1 style="text-align: center;">Cliqueur</h1>
-            <div style="width:100%;display: block;margin:auto;text-align: center;float:center;">
-                <div class="mi">
-                <button onclick="Count(); ecart()">entree</button>
-            <hr>
-            <div align="center">
-            <label>Nombres de personnes entrees</label>
-                <span id="output" style="color:green;">0</span>
-                </div>
-                <hr>
-                </div>
-                <div class="mi">
-                        <div align="center">
-
-                    <button onclick="Count_1();ecart()" id ="a">sortie</button>
-                    </div>
-                <hr>
-                <div align="center">
-                <label >Nombres de personnes sorties</label>
-                    <span id="output_1">0</span>
-                </div>
-                    <hr>
-                </div>
-            </div><br>
-        <div align="center" style="display: block;">
-        <h3>ecart</h3>
-        <span id ="resultat"> 0</span>
-        </div>
-        <div align="center">
-        <h3>remise a zero</h3>
-            <button onclick="zero()" id="o">remise a zero</button>
-        </div>
-        <!-- /**** partie affichage stat ****/ -->
-        <div align="center" style="display: block;">
-            <h3>stats</h3>
-            <hr>
-            <span id ="stat"> 0</span>
-            
-            <hr>
-            <span id="statotal">0</span>
-        
-            <hr>
-            <span id="statresult">0</span>
-        </div>
-            <hr>
-            <div align="center">
-            <h3>remise a zero stats </h3>
-                <button onclick="zerostat()" id="s">remise a zero</button>
-            </div>
-
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../css/clicstylecss.css">
+       <!-- <link rel="stylesheet" href="../css/CssParam.css">-->
+        <script src="../js/clicjs.js"></script>
+     
+    </head>
+        <div id=back>
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="../file/cliqueur.html">Cliqueur</a></li>
+        <li><a href="../file/statclicoeur.html">Stats Clicoeur</a></li>
+        <h2 style="text-align: center;">Statistiques Cliqueur</h2>
+<!-- /**** affichage de la date ****/      -->
+       
+        <p id="dateur">heure </p>
+        <p id="demo" style="display:none">Commence les Stats!</p>
+        <button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!</button>
     </body>
 </html>
