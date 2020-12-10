@@ -88,7 +88,6 @@ function monseuil()
     var surface = document.getElementById("surfacein").innerText;
     var perisecu = document.getElementById("distsecuin").innerText;
     seuil = surface / perisecu ;
-    console.log(seuil);
     document.getElementById("leseuil").innerHTML = surface / perisecu;
   }
 function getValue() 
@@ -112,20 +111,6 @@ function datehor ()
 var d = new Date();
 d.setFullYear(2020);
 document.getElementById("heur").innerHTML = d;
-}
-
-function calcul()
-{
-  
-  var surf = document.getElementById("surfacein").innerText;
-  var peri = document.getElementById("distsecuin").innerText;
-  var x = surf/peri;
-  
-  x.toString();            // returns ___ from variable x
-  (surf).toString(); 
-  (peri).toString();        
-  (surf / peri).toString();
-  document.getElementById("leseuilcalcul").innerHTML= (surf/peri).toString();
 }
 */
 
@@ -167,7 +152,7 @@ function checkCookie()
 
 function controle()
 {
-var saisie =document.getElementById("input").value;
+var saisie = document.getElementById("input").value;
 alert("Le Seuil du Cliqueur sera avec cette valeur : "+ saisie);
 }
 
