@@ -27,10 +27,10 @@ button {
 }
 
 button:hover {
-    background-color:#172bdd;
+    background-color:#a9acc2;
 }
 #resultat{
-    background-color:#1411c4;
+    background-color:#7e7d9e;
     color:white;
     font-size:50px;
     padding:4px;	
