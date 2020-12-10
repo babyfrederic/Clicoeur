@@ -14,12 +14,17 @@
         <li><a href="../index.html">Accueil</a></li>
         <li><a href="../file/cliqueur.html">Cliqueur</a></li>
         <li><a href="../file/statclicoeur.html">Stats Clicoeur</a></li>
+    </br>
+     <p id="heur"></p>
         <h2 style="text-align: center;">Parametres Cliqueur</h2>
         <h5 style="text-align: center;">Détermination du Seuil d'alerte</h5> 
-<!-- /**** affichage de la date ****/      -->
-       
-<p id="heur">heure</p>
 
+<!-- /**** affichage de la date ****/ -->    
+<script>
+var d = new Date();
+d.setFullYear(2020);
+document.getElementById("heur").innerHTML = d;
+</script>
 
 <!-- /**** affichage de la Surface  ****/      -->
 
@@ -44,17 +49,20 @@
 <!-- /**** affichage du seuil  ****/      -->        
             <div style="text-align: center">
                 </br>
-                <input type="number" placeholder="surface / distance" id="leseuil" >
+                <input type="number" placeholder="surface / distance" id="unseuil" >
                 </br>
-                <buton id="leseuil"  name="calculer seuil" on click="monseuil()" >
-                <label>Seuil de Tolérance (nb. max de personnes)</label>
-                <span id="distsecuin" style="color:rgb(25, 184, 233);">0 "dist. secu."</span>
-                <span id="surfacein" style="color:rgb(25, 184, 233);">0 "Surface"</span>
-                <span id="leseuilcalcul" style="color:rgb(25, 184, 233);">0 "Seuilcal"</span>
-                <span id="leseuil" style="color:rgb(25, 184, 233);">0 "Seuil"</span>
-                <span style="color:rgb(25, 154, 240);"  leseuil ></span>
-
-                <span style="color:rgb(25, 154, 240)"; seuil >  Personnes : Seuil de tolerance </span>
+                <button onclick="monseuil()" id="v" >Calculer seuil </button>
+<script>
+function monseuil()
+  {
+    var surface = document.getElementById("surfacein").value;
+    var perisecu = document.getElementById("distsecuin").value;
+    document.getElementById("leseuil").innerHTML = surface / perisecu;
+  }
+</script>
+    <button center >
+                <span id="leseuil" style="color:rgb(204, 98, 11);" >0 "Seuil"</span>               
+            </button>  
             </div>
             </br>   
             </br>
@@ -63,7 +71,6 @@
                 <input placeholder="Email" type="email" name="email" id="email" autocomplete="off">
             </div> 
         </div>   
-        <button onclick="monseuil()" id="s">calcul du seuil</button>
         </div>
         </div>
     </body>

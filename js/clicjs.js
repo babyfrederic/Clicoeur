@@ -81,15 +81,7 @@ function peri()
     }
 /*** valeurs pour le seuil d'alerte ***/
 /** calcul du seuil recommandé */
-var  surface =0;
-var perisecu = 1;
-function monseuil()
-  {
-    var surface = document.getElementById("surfacein").innerText;
-    var perisecu = document.getElementById("distsecuin").innerText;
-    seuil = surface / perisecu ;
-    document.getElementById("leseuil").innerHTML = surface / perisecu;
-  }
+
 function getValue() 
   {
     // Sélectionner l'élément input et récupérer sa valeur 
@@ -112,7 +104,7 @@ var d = new Date();
 d.setFullYear(2020);
 document.getElementById("heur").innerHTML = d;
 }
-*/
+
 
 function setCookie(cname,cvalue,exdays) {
 var d = new Date();
@@ -120,6 +112,7 @@ d.setTime(d.getTime() + (exdays*24*60*60*1000));
 var expires = "expires=" + d.toGMTString();
 document.cookie = cname + "=" + cvalue + ";" + expires + ";path=../";
 }
+*/
 
 function getCookie(cname) {
 var name = cname + "=";
