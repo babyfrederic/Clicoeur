@@ -20,7 +20,17 @@
 	    border: none;
 	    cursor:pointer;
 	}
-
+	#resultat{
+                background-color:#1411c4;
+                color:white;
+                font-size:50px;
+                padding:5px;	
+            }
+    #back 
+            {
+            background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            }
 	#a {
 	    background-color: red;
 	}
@@ -31,14 +41,7 @@
 	
 	</style>  
 	<script>
-	var i = 0
-
-	function Count() {
-	    document.getElementById("output").innerHTML = i++ + 1;
-	}
-
-	function Count_1() {
-	    document.getElementById("output_1").innerHTML = i++ + 1;
+	
 	}
 	</script>  
 	</head>
@@ -46,20 +49,46 @@
         <li><a href="../index.html">Accueil</a></li>
     <div align="center">
     <h1>Cliqueur</h1>
-        <button onclick="Count()">entree</button>
+        <button onclick="Count();ecart()">entree</button>
         </div>
        <hr>
        <div align="center">
        <label>Nombres de personnes entrees</label>
-        <span id="output">0</span>
+        <span id="inputa">0</span>
         <hr>
             <div align="center">
 
-        <button onclick="Count_1()" id ="a">sortie</button>
+        <button onclick="Count_1();ecart()" id ="a">sortie</button>
         </div>
        <hr>
        <label>Nombres de personnes entrees</label>
-        <span id="output_1">0</span>
-        <hr>
+        <span id="outputa">0</span>
+		<hr>
+		<br>
+		<div align="center" style="display: block;">
+			
+			<span id ="resultat"> 0</span>
+			<h3>ecart</h3>
+		</div>
+		<br>
+		<script>
+				var i = 0;
+				var o = 0;
+				var ii= 0;
+				var ou= 0;
+				function Count() {
+					document.getElementById("inputa").innerHTML = i++ + 1;
+				}
+				function Count_1() {
+					document.getElementById("outputa").innerHTML = o++ + 1;
+				}
+				function ecart(){
+					var ii = document.getElementById("inputa").innerText;
+					var ou = document.getElementById("outputa").innerText;
+					document.getElementById("resultat").innerHTML = i - o;
+				}
+
+		</script>
+		
     </body>
 </html>
