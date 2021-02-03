@@ -1,3 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Base Cliqueur</title>
+	<style>
+	span {
+	    background-color:light-grey;
+	    border-radius:40px;
+	    color:green;
+	}
+	span:last-of-type{
+	    color:red;
+	}
+
+	button {
+	    background-color: #84e988;
+	    color: white;
+	    padding: 20px;
+	    font-size: 50px;
+	    border: none;
+	    cursor:pointer;
+	}
+	#resultat{
+                background-color:#1411c4;
+                color:white;
+                font-size:50px;
+                padding:5px;	
+            }
+    #back 
+            {
+            background-image: url("https://images.pexels.com/photos/114979/pexels-photo-114979.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+            background-size: cover;
+            }
+	#a {
+	    background-color: red;
+	}
+
+	button:hover {
+	    background-color:#a3cfa4;
+	}
+	
+	</style>  
+ 
+	</head>
+    <body>
+        <li><a href="../index.html">Accueil</a></li>
+    <div align="center">
+    <h1>Cliqueur</h1>
+        <button onclick="Count();ecart()">entree</button>
+        </div>
+       <hr>
+       <div align="center">
+       <label>Nombres de personnes entrees</label>
+        <span id="inputa">0</span>
+        <hr>
+            <div align="center">
+
+        <button onclick="Count_1();ecart()" id ="a">sortie</button>
+        </div>
+       <hr>
+       <label>Nombres de personnes entrees</label>
+        <span id="outputa">0</span>
+		<hr>
+		<br>
+		<div align="center" style="display: block;">
+			
+			<span id ="resultat"> 0</span>
+			<h3>ecart</h3>
+		</div>
+		<br>
+		<script>
+				var i = 0;
+				var o = 0;
+				var ii= 0;
+				var ou= 0;
+				function Count() {
+					document.getElementById("inputa").innerHTML = i++ + 1;
+				}
+				function Count_1() {
+					document.getElementById("outputa").innerHTML = o++ + 1;
+				}
+				function ecart(){
+					var ii = document.getElementById("inputa").innerText;
+					var ou = document.getElementById("outputa").innerText;
+					document.getElementById("resultat").innerHTML = i - o;
+				}
+
+		</script>
+		
+    </body>
+=======
 <!DOCTYPE html>
 <html>
     <head>
@@ -91,4 +183,5 @@
 		</script>
 		
     </body>
+>>>>>>> 931a578c2d7392658f5170a45df087a883b64f52
 </html>
